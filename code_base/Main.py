@@ -9,7 +9,7 @@ import getopt
 
 #---------Set sys.path for pcat execution---------------------------------------
 # Absolute path to pcat
-full_path = os.path.abspath(os.path.dirname(sys.argv[0])).split('automation_tool')[0]
+full_path = os.path.abspath(os.path.dirname(sys.argv[0])).split('code_base')[0]
 sys.path.append(full_path)
 # Walk path and append to sys.path
 for root, dirs, files in os.walk(full_path):
