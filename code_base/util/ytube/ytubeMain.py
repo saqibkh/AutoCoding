@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 ##
-#    @brief This file contains Main class for youtube automation
+#    @brief This file contains Main class for ytube automation
 #
 #    @author Saqib Khan
 ##
@@ -13,13 +13,13 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
-from FWConstants import FWConstants
+from Constants import Constants
 
 
 
 
 
-class youtubeMain():
+class ytubeMain():
 
     ##
 	# This file contain the MAIN class for running all youtube automation
@@ -31,7 +31,7 @@ class youtubeMain():
 
     def openBrowser(self):
         self.driver = webdriver.Firefox()
-        self.driver.implicitly_wait(30)
+        self.driver.implicitly_wait(100)
         self.accept_next_alert = True
 
 
@@ -39,9 +39,9 @@ class youtubeMain():
         self.openBrowser()
         self.driver.get("https://www.youtube.com/watch?v=6KBgmakci9Q")
         self.driver.implicitly_wait(100)
-        time.sleep(3)
+        time.sleep(360)
         self.tearDown()
-        return FWConstants.SUCCESS
+        return Constants.SUCCESS
 
 
     def tearDown(self):

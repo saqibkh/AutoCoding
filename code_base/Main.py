@@ -48,10 +48,10 @@ def main(argv):
             l_Test_Function = arg
 
     ## All different test cases should be mentioned here
-    if l_Test_Function == "youtube":
-        from youtubeMain import youtubeMain
-        youtube = youtubeMain()
-        l_result = youtube.runTest()
+    if l_Test_Function == "ytube":
+        from ytubeMain import ytubeMain
+        l_ytube = ytubeMain()
+        l_result = l_ytube.runTest()
 
     # Print out the result and exit
     if l_result == Constants.SUCCESS:
