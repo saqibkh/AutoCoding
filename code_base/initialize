@@ -1,0 +1,8 @@
+#! /usr/bin/perl -w
+use strict;
+use warnings;
+
+`cd \${HOME}`;
+`rm -rf AutoCoding`;
+`git clone https://github.com/saqibkh/AutoCoding.git`;
+`chmod ugo+rwx -R AutoCoding`;
