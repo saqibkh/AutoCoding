@@ -1,4 +1,8 @@
 #!/bin/bash
-PASSWD="saqibkhan"
 echo "Y" | apt-get update
 echo "Y" | apt-get install git vim openssh-server ubuntu-desktop tightvncserver
+useradd saqib -p saqibkhan
+adduser saqib sudo
+adduser saqib root
+
+
