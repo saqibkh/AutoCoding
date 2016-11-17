@@ -6,3 +6,4 @@ use warnings;
 `rm -rf AutoCoding`;
 `git clone https://github.com/saqibkh/AutoCoding.git`;
 `chmod ugo+rwx -R AutoCoding`;
+`python AutoCoding/code_base/Main.py -F ytube`;
