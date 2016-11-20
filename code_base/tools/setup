@@ -1,6 +1,10 @@
 #!/bin/bash
 echo "Y" | apt-get update
-echo "Y" | apt-get install git vim openssh-server ubuntu-desktop tightvncserver
+echo "Y" | apt-get install git vim openssh-server ubuntu-desktop tightvncserver gconf-editor python-pip xvfb unzip python-virtualenv
+pip-install pyvirtualdisplay selenium
+virtualenv env
+pip install --upgrade pip
+pip install -U selenium
 useradd saqib -p saqibkhan
 adduser saqib sudo
 adduser saqib root
