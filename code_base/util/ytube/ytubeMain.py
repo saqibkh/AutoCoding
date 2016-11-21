@@ -14,9 +14,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 from Constants import Constants
-
-
-
+from pyvirtualdisplay import Display
 
 
 class ytubeMain():
@@ -30,6 +28,8 @@ class ytubeMain():
         self.driver = None
 
     def openBrowser(self):
+        display = Display(visible=0, size=(800, 600))
+        display.start()
         self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(100)
         self.accept_next_alert = True
@@ -45,4 +45,5 @@ class ytubeMain():
 
 
     def tearDown(self):
+        print self.driver.title
         self.driver.quit()

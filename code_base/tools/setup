@@ -1,7 +1,9 @@
 #!/bin/bash
 echo "Y" | apt-get update
-echo "Y" | apt-get install git vim openssh-server ubuntu-desktop tightvncserver gconf-editor python-pip xvfb unzip python-virtualenv
-pip-install pyvirtualdisplay selenium
+echo "Y" | apt-get install git vim openssh-server ubuntu-desktop tightvncserver gconf-editor python-pip xvfb unzip python-virtualenv update upgrade
+echo "Y" | apt-get update 
+echo "Y" | apt-get upgrade
+pip install pyvirtualdisplay selenium
 virtualenv env
 pip install --upgrade pip
 pip install -U selenium
