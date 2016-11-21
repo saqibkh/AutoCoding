@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Y" | apt-get update
-echo "Y" | apt-get install git vim openssh-server ubuntu-desktop tightvncserver gconf-editor python-pip xvfb unzip python-virtualenv update upgrade
+echo "Y" | apt-get install git vim openssh-server ubuntu-desktop tightvncserver gconf-editor python-pip xvfb unzip python-virtualenv 
 echo "Y" | apt-get update 
 echo "Y" | apt-get upgrade
 pip install pyvirtualdisplay selenium
