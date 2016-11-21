@@ -3,9 +3,7 @@ use strict;
 use warnings;
 
 `cd \${HOME}`;
-`rm -rf AutoCoding`;
-`git clone https://github.com/saqibkh/AutoCoding.git`;
-`chmod ugo+rwx -R AutoCoding`;
+`cd AutoCoding`;
 `git config --global user.email "saqibkhan@utexas.edu"`;
 `git config --global user.name "saqibkh"`;
 `python AutoCoding/code_base/Main.py -F ytube`;

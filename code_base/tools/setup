@@ -1,14 +1,25 @@
 #!/bin/bash
+
+# Installs all basic/core packages
 echo "Y" | apt-get update
 echo "Y" | apt-get install git vim openssh-server ubuntu-desktop tightvncserver gconf-editor python-pip xvfb unzip python-virtualenv 
+
+# Installs pyvirtual and xvfb for headless selenium
 echo "Y" | apt-get update 
 echo "Y" | apt-get upgrade
 pip install pyvirtualdisplay selenium
 virtualenv env
 pip install --upgrade pip
 pip install -U selenium
+
+# Add user saqib if not already there
 useradd saqib -p saqibkhan
 adduser saqib sudo
 adduser saqib root
 
+# Gets latest code from github
+cd /home/saqib/AutoCoding
+git pull
+chmod ugo+rwx -R /home/saqib/AutoCoding
+chmod ugo+rwx -R /home/saqib/AutoCoding/.git/
 
