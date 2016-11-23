@@ -2,10 +2,10 @@
 #use strict;
 #use warnings;
 
-`cd /home/saqib/`;
+#`cd /home/saqib/`;
 `git config --global user.email "saqibkhan@utexas.edu"`;
 `git config --global user.name "saqibkh"`;
-`python AutoCoding/code_base/Main.py -F ytube`;
+`python /home/saqib/AutoCoding/code_base/Main.py -F ytube`;
 
 
 exit 0;
