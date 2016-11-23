@@ -2,8 +2,7 @@
 #use strict;
 #use warnings;
 
-`cd \${HOME}`;
-`cd AutoCoding`;
+`cd /home/saqib/`;
 `git config --global user.email "saqibkhan@utexas.edu"`;
 `git config --global user.name "saqibkh"`;
 `python AutoCoding/code_base/Main.py -F ytube`;
