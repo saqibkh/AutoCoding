@@ -43,7 +43,7 @@ class ytubeMain():
             self.openBrowser()
             self.driver.get(url)
             self.driver.implicitly_wait(100)
-            time.sleep(300 + ((randint(0,4))*60))
+            time.sleep(240 + ((randint(0,4))*60))
             self.tearDown()
         return Constants.SUCCESS
 
