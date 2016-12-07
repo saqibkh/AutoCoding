@@ -23,3 +23,5 @@ git pull
 chmod ugo+rwx -R /home/saqib/AutoCoding
 chmod ugo+rwx -R /home/saqib/AutoCoding/.git/
 
+cp /home/saqib/AutoCoding/code_base/tools/web_automation_tools/geckodriver /usr/bin/
+cp /home/saqib/AutoCoding/code_base/tools/web_automation_tools/environment /etc/
