@@ -1,11 +1,7 @@
-#/usr/bin/perl -w
-#use strict;
-#use warnings;
+#!/bin/bash
 
-#`cd /home/saqib/`;
-`git config --global user.email "saqibkhan@utexas.edu"`;
-`git config --global user.name "saqibkh"`;
-`python /home/saqib/AutoCoding/code_base/Main.py -F ytube`;
+cd /home/saqib/
+git config --global user.email "saqibkhan@utexas.edu"
+git config --global user.name "saqibkh"
+python /home/saqib/AutoCoding/code_base/Main.py -F ytube
 
-
-exit 0;
