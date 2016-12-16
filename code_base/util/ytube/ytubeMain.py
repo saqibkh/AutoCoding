@@ -30,8 +30,8 @@ class ytubeMain():
         self.driver = None
 
     def openBrowser(self):
-        display = Display(visible=0, size=(800, 600))
-        display.start()
+        #display = Display(visible=0, size=(800, 600))
+        #display.start()
         self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(100)
         self.accept_next_alert = True
@@ -41,13 +41,38 @@ class ytubeMain():
         URLs = ytubeConstants.URLS;
         for url in URLs:
             self.openBrowser()
-            self.driver.get(url)
+            self.driver.get(url[0])
             self.driver.implicitly_wait(100)
-            time.sleep(50 + ((randint(0,3))*30))
+            time.sleep((url[1]*60) - (randint(0,60)))
             self.tearDown()
         return Constants.SUCCESS
 
 
     def tearDown(self):
-        #print self.driver.title
         self.driver.quit()
+
+    def pauseORresume(self):
+        self.driver.find_element_by_css_selector("button.ytp-play-button.ytp-button").click()
+
+    def nextVideo(self):
+        self.driver.find_element_by_css_selector("a.ytp-next-button.ytp-button").click()
+
+    def googleLOGIN(self):
+        self.driver.get("https://www.google.com/")
+        self.driver.implicitly_wait(100)
+        self.driver.find_element_by_id("gb_70").click()
+        self.driver.find_element_by_id("Email").clear()
+        self.driver.find_element_by_id("Email").send_keys("skhansa00001@gmail.com")
+        self.driver.find_element_by_id("next").click()
+        self.driver.find_element_by_id("Passwd").clear()
+        self.driver.find_element_by_id("Passwd").send_keys("saqibkhan1992")
+        self.driver.find_element_by_id("signIn").click()
+
+
+
+
+
+
+
+
+
