@@ -8,6 +8,7 @@ mv /etc/environment_tor_docker /etc/environment
 
 # Update package information, ensure that APT works with the https method, and that CA certificates are installed.
 echo "Y" | apt-get update
+echo "Y" | dpkg --configure -a
 echo "Y" | apt-get install apt-transport-https ca-certificates
 
 #Add the new GPG key
@@ -19,9 +20,11 @@ echo "Y" | apt-get update
 echo "Y" | apt-get install linux-image-extra-$(uname -r) linux-image-extra-virtual
 
 echo "Y" | apt-get update
+echo "Y" | dpkg --configure -a
 echo "Y" | apt-get install linux-image-generic-lts-trusty
 
 echo "Y" | apt-get update
+echo "Y" | dpkg --configure -a
 echo "Y" | apt-get install docker-engine
 service docker start
 
