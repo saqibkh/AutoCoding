@@ -4,7 +4,7 @@ cd /home/saqib/AutoCoding
 ./code_base/tools/setup
 
 cp /home/saqib/AutoCoding/code_base/tools/web_automation_tools/environment_tor_docker /etc/
-mv /etc/environment_tor_docker /etc/environment
+#mv /etc/environment_tor_docker /etc/environment
 
 # Update package information, ensure that APT works with the https method, and that CA certificates are installed.
 echo "Y" | apt-get update
