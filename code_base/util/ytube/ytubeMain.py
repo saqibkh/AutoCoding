@@ -17,6 +17,7 @@ from Constants import Constants
 from pyvirtualdisplay import Display
 from random import randint
 from ytubeConstants import ytubeConstants
+from google import google
 
 
 class ytubeMain():
@@ -35,15 +36,41 @@ class ytubeMain():
         self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(100)
         self.accept_next_alert = True
+        self.google = google(self.driver)
+
 
 
     def runTest(self):
         URLs = ytubeConstants.URLS;
         for url in URLs:
             self.openBrowser()
+
+            # 1% of views would come from google accounts
+            if((randint(1,100)) == 1):
+                self.googleSignIn()
+
+            # Start the video using the link
             self.driver.get(url[0])
             self.driver.implicitly_wait(100)
-            time.sleep((url[1]*60) - (randint(0,60)))
+
+            # 5% of views would pause here for 5-30 sends
+            if ((randint(1, 100)) <= 5):
+                time.sleep((randint(30,60)))
+                self.pauseORresume()
+                time.sleep((randint(5,30)))
+                self.pauseORresume()
+
+            time.sleep((url[1]*60) - (randint(0,120)))
+
+            #10% of videos will be paused here
+            if ((randint(1, 100)) <= 10):
+                self.pauseORresume()
+
+            # 10% of videos will move to next video here
+            if ((randint(1, 100)) <= 10):
+                self.nextVideo()
+
+
             self.tearDown()
         return Constants.SUCCESS
 
@@ -57,16 +84,13 @@ class ytubeMain():
     def nextVideo(self):
         self.driver.find_element_by_css_selector("a.ytp-next-button.ytp-button").click()
 
-    def googleLOGIN(self):
-        self.driver.get("https://www.google.com/")
-        self.driver.implicitly_wait(100)
-        self.driver.find_element_by_id("gb_70").click()
-        self.driver.find_element_by_id("Email").clear()
-        self.driver.find_element_by_id("Email").send_keys("skhansa00001@gmail.com")
-        self.driver.find_element_by_id("next").click()
-        self.driver.find_element_by_id("Passwd").clear()
-        self.driver.find_element_by_id("Passwd").send_keys("saqibkhan1992")
-        self.driver.find_element_by_id("signIn").click()
+    def googleSignIn(self):
+        l_googleIDs = ytubeConstants.ACCOUNTS;
+        l_id = l_googleIDs[(randint(0, len(l_googleIDs) - 1))]
+        self.google.googleLOGIN(l_id[0], l_id[1])
+
+
+
 
 
 
