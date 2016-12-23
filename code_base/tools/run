@@ -1,6 +1,9 @@
 #!/bin/bash
 
 cd /home/saqib/
+bleachbit --clean firefox.*
+
+cd /home/saqib/AutoCoding/
 git config --global user.email "saqibkhan@utexas.edu"
 git config --global user.name "saqibkh"
 python /home/saqib/AutoCoding/code_base/Main.py -F ytube
