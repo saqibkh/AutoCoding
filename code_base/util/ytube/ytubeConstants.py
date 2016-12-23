@@ -6,7 +6,9 @@ class ytubeConstants(object):
             ["https://www.youtube.com/watch?v=6KBgmakci9Q" , 1]]
     
     # emailaddress, emailpassword, FirstName, LastName, Country
-    ACCOUNTS = [["skhansa00001@gmail.com", "", "sal", "khan", "Pakistan"]]
+    ACCOUNTS = [["skhansa00001@gmail.com", "", "sal", "khan", "Pakistan"],
+                ["zahrakhan000001@gmail.com", "discomulla", "zahra", "khan", "Pakistan"],
+                ["maKhanhira@gmail.com", "discomulla", "zahra", "khan", "Pakistan"]]
 
     def __init__(self):
         ##
