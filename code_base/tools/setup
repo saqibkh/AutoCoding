@@ -2,7 +2,8 @@
 
 # Installs all basic/core packages
 echo "Y" | apt-get update
-echo "Y" | apt-get install git vim openssh-server firefox virtualbox bleachbit tightvncserver gconf-editor python-pip xvfb unzip python-virtualenv network-manager-openvpn-gnome network-manager-openvpn 
+echo "Y" | apt-get install git vim openssh-server firefox virtualbox bleachbit tightvncserver gconf-editor python-pip xvfb build-essential module-assistant unzip python-virtualenv network-manager-openvpn-gnome network-manager-openvpn 
+sudo m-a prepare
 
 # Installs pyvirtual and xvfb for headless selenium
 echo "Y" | apt-get update 
