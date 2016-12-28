@@ -3,6 +3,8 @@
 cd /home/saqib/
 bleachbit --clean firefox.*
 
+ifconfig
+
 cd /home/saqib/AutoCoding/
 git config --global user.email "saqibkhan@utexas.edu"
 git config --global user.name "saqibkh"
