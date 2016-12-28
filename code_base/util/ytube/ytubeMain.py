@@ -69,6 +69,7 @@ class ytubeMain():
             # 10% of videos will move to next video here
             if ((randint(1, 100)) <= 10):
                 self.nextVideo()
+		time.sleep((randint(15,120)))
 
 
             self.tearDown()
