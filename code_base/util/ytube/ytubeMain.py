@@ -60,7 +60,7 @@ class ytubeMain():
                 time.sleep((randint(5,30)))
                 self.pauseORresume()
 
-            time.sleep((url[1]*60) - (randint(0,120)))
+            time.sleep((url[1]*60) - (randint(0,60)))
 
             #10% of videos will be paused here
             if ((randint(1, 100)) <= 10):
