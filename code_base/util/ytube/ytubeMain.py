@@ -47,14 +47,14 @@ class ytubeMain():
 
             # 1% of views would come from google accounts
             if((randint(1,100)) == 1):
-                self.googleSignIn()
+                #self.googleSignIn()
 
             # Start the video using the link
             self.driver.get(url[0])
             self.driver.implicitly_wait(100)
 
-            # 5% of views would pause here for 5-30 sends
-            if ((randint(1, 100)) <= 5):
+            # 10% of views would pause here for 5-30 sends
+            if ((randint(1, 100)) <= 10):
                 time.sleep((randint(30,60)))
                 self.pauseORresume()
                 time.sleep((randint(5,30)))
