@@ -59,6 +59,12 @@ class ytubeMain():
                 self.pauseORresume()
                 time.sleep((randint(5,30)))
                 self.pauseORresume()
+		
+	    # 10% of videos will move to next video here
+            if ((randint(1, 100)) <= 10):
+		time.sleep((randint(15,120)))
+                self.nextVideo()
+		time.sleep((randint(15,120)))
 
             time.sleep((url[1]*60) - (randint(0,60)))
 
