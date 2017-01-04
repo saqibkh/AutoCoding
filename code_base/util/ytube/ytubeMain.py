@@ -46,8 +46,8 @@ class ytubeMain():
             self.openBrowser()
 
             # 1% of views would come from google accounts
-            if((randint(1,100)) == 1):
-                #self.googleSignIn()
+            if((randint(1,100)) < 1):
+                self.googleSignIn()
 
             # Start the video using the link
             self.driver.get(url[0])
