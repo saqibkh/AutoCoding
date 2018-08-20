@@ -13,7 +13,7 @@ class ytubeConstants(object):
     # "skhansa00001@gmail.com", "", "sal", "khan", "Pakistan"
     ACCOUNTS = [["zahrakhan000001@gmail.com", "discomulla", "zahra", "khan", "Pakistan"],
                 ["maKhanhira@gmail.com", "discomulla", "mahira", "khan", "Pakistan"],
-                ["skhansa000001@gmail.com", "discomulla", "salma", "khan", "Pakistan"]]
+                ["skhansa000001@gmail.com", "discomulla1992", "salma", "khan", "Pakistan"]]
 
     def __init__(self):
         ##
